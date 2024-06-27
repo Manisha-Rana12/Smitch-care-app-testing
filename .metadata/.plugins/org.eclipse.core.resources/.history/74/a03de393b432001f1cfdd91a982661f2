@@ -1,0 +1,74 @@
+package project;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+
+import testClass.TestBooksWagon;
+
+public class BookswagonSignIn {
+
+	WebDriver driver;
+	
+	public BookswagonSignIn(WebDriver driver) {
+		this.driver = driver;
+		//this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(xpath="//span[@id='ctl00_lblUser']")
+	private WebElement myAccount;
+	
+	@FindBy(id="#ctl00_phBody_SignIn_txtEmail")
+	private WebElement mobFeild;
+	
+	@FindBy(id="#ctl00_phBody_SignIn_txtPassword")
+	private WebElement password; //4v#jQzT#Heq8BqE
+	
+	@FindBy(id="#ctl00_phBody_SignIn_btnLogin")
+	private WebElement loginbtn;
+
+	public WebElement getMobFeild() {
+		return mobFeild;
+	}
+
+	public void setMobFeild(WebElement mobFeild) {
+		this.mobFeild = mobFeild;
+	}
+
+	public WebElement getLoginbtn() {
+		return loginbtn;
+	}
+
+	public void setLoginbtn(WebElement loginbtn) {
+		this.loginbtn = loginbtn;
+	}
+
+	public WebElement getMyAccount() {
+		return myAccount;
+	}
+
+	public WebElement getPassword() {
+		return password;
+	}
+
+	
+	
+//	@FindBy(xpath="//input[@id='ctl00_phBody_SignUp_chkNewsletter']")
+//	private WebElement checkBox;
+//	
+//	@FindBy(id="#ctl00_phBody_SignUp_btnContinue")
+//	private WebElement continueBtn;
+
+//	public void hoverOverMenu() {
+//        Actions actions = new Actions(driver);
+//        actions.moveToElement(myAccount).perform();
+//    }
+	
+	
+
+	
+}

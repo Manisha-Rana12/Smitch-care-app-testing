@@ -1,0 +1,37 @@
+
+package SmitchCare;
+
+import java.net.MalformedURLException;
+import java.util.concurrent.TimeUnit;
+
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import PackageCapability.SmitchCareCapability;
+import io.appium.java_client.MobileBy;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
+public class SmitchCareHybridApp extends SmitchCareCapability{
+
+	AndroidDriver<AndroidElement> driver;
+	
+	@BeforeTest
+	public void test1() throws MalformedURLException {
+		
+		driver = smitchCareCaps();
+		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	}
+	
+	@Test
+	public void login() {
+		driver.findElement(MobileBy.id("com.mysmitch.care:id/txtLogin")).click();
+	}
+//	@Test
+//	public void moodFunctionality() {
+//		
+//		driver.findElement(MobileBy.id("com.mysmitch.care:id/mood_title")).click();
+//	}
+}

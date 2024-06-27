@@ -1,0 +1,19 @@
+package PackageCapability;
+
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import io.appium.java_client.remote.AndroidMobileCapabilityType;
+import io.appium.java_client.remote.MobileCapabilityType;
+
+public class SmitchCareCapability {
+
+	
+	public void smitchCareCaps() {
+		
+		DesiredCapabilities dec = new DesiredCapabilities();
+		
+		dec.setCapability(MobileCapabilityType.DEVICE_NAME, "V2033");
+		dec.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
+		dec.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "");
+	}
+}

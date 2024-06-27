@@ -1,0 +1,6 @@
+
+package SmitchCare;
+
+public class SmitchCareHybridApp extends SmitchCareCapability{
+
+}

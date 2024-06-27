@@ -1,0 +1,56 @@
+
+package SmitchCare;
+
+import java.net.MalformedURLException;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+import io.appium.java_client.TouchAction;
+import PackageCapability.SmitchCareCapability;
+import io.appium.java_client.MobileBy;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
+public class SmitchCareHybridApp extends SmitchCareCapability{
+
+	AndroidDriver<AndroidElement> driver;
+	
+	@BeforeTest
+	public void test1() throws MalformedURLException {
+		
+		driver = smitchCareCaps();
+		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	}
+	
+	@Test(priority = 1)
+	public void login() {
+		driver.findElement(MobileBy.id("com.mysmitch.care:id/txtLogin")).click();
+	}
+	@Test(priority = 2)
+	public void moodFunctionality() throws InterruptedException {
+		
+//		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"MOOD\"))").click();
+		//driver.findElement(MobileBy.id("com.mysmitch.care:id/mood_title")).click();
+	
+//		WebDriverWait wait = new WebDriverWait(driver, 20);
+//		Thread.sleep(5000);
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.id("com.mysmitch.care:id/mood_title")));
+//        Thread.sleep(5000);
+//        // Use UiScrollable to scroll to the "MOOD" element
+//        driver.findElementByAndroidUIAutomator(
+//            "new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text(\"MOOD\"));").click();
+	
+		 // Ensure the screen is fully loaded
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.id("com.mysmitch.care:id/some_element_to_wait_for")));
+
+        // Use UiScrollable to scroll to the element with the specified ID
+        driver.findElementByAndroidUIAutomator(
+            "new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().resourceId(\"com.mysmitch.care:id/mood_title\"));").click();
+	}
+}

@@ -1,0 +1,39 @@
+package testClass;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class TestBooksWagon{
+
+	WebDriver driver;
+	
+	public void setUp() throws IOException {
+		
+		Properties pro = new Properties();
+		
+		FileInputStream fInputS =new FileInputStream("C:\\Users\\Manisha\\Documents\\workspace-spring-tool-suite-4-4.21.1.RELEASE\\BookswagonProject\\src\\test\\resources\\myIndia.properties");
+		
+		pro.load(fInputS);
+		
+		WebDriverManager.chromedriver().setup();
+		
+		WebDriver driver = new ChromeDriver();
+		
+		driver.manage().window().maximize();
+		
+		driver.get(pro.getProperty("baseURL"));
+		
+		
+		
+		
+	}
+
+	
+	
+}

@@ -1,0 +1,64 @@
+package project;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+
+import testClass.TestBooksWagon;
+
+public class BookswagonSignIn {
+
+	WebDriver driver;
+	
+	public BookswagonSignIn(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(xpath="//span[@id='ctl00_lblUser']")
+	private WebElement myAccount;
+	
+	@FindBy(xpath="//*[text()='New to Bookswagon?']")
+	private WebElement signIn;
+	
+	@FindBy(id="#ctl00_phBody_SignUp_txtName")
+	private WebElement nameFeild;
+	
+	@FindBy(xpath="//input[@id='ctl00_phBody_SignUp_txtEmail']")
+	private WebElement mobileFeild;
+	
+	@FindBy(xpath="//input[@id='ctl00_phBody_SignUp_chkNewsletter']")
+	private WebElement checkBox;
+	
+	@FindBy(id="#ctl00_phBody_SignUp_btnContinue")
+	private WebElement continueBtn;
+
+	
+	public WebElement getMyAccount() {
+		return myAccount;
+	}
+
+	public WebElement getSignIn() {
+		return signIn;
+	}
+
+	public WebElement getNameFeild() {
+		return nameFeild;
+	}
+
+	public WebElement getMobileFeild() {
+		return mobileFeild;
+	}
+
+	public WebElement getCheckBox() {
+		return checkBox;
+	}
+
+	public WebElement getContinueBtn() {
+		return continueBtn;
+	}
+
+	
+}

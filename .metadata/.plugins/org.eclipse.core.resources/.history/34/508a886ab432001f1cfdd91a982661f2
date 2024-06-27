@@ -1,0 +1,70 @@
+package testClass;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import project.BookswagonSignIn;
+
+public class TestBooksWagon{
+
+	WebDriver driver;
+	BookswagonSignIn signin;
+	
+	@BeforeTest
+	public void setUp() throws IOException {
+		
+		Properties pro = new Properties();
+		
+		FileInputStream fInputS =new FileInputStream("C:\\Users\\Manisha\\Documents\\workspace-spring-tool-suite-4-4.21.1.RELEASE\\BookswagonProject\\src\\test\\resources\\myIndia.properties");
+		
+		pro.load(fInputS);
+		
+		WebDriverManager.chromedriver().setup();
+		
+		WebDriver driver = new ChromeDriver();
+		
+		driver.manage().window().maximize();
+		
+		driver.get(pro.getProperty("baseURL"));
+		
+		signin = new BookswagonSignIn(driver);
+		
+		
+	}
+ 
+	@Test
+	public void testSignIn() throws InterruptedException {
+//		signin.getMyAccount().click();
+//		Thread.sleep(2000);
+//		signin.getSignIn().click();
+//		Thread.sleep(2000);
+//		signin.getNameFeild().sendKeys("isha");;
+//		Thread.sleep(2000);
+//		signin.getMobileFeild().sendKeys("9382392290");
+//		Thread.sleep(6000);
+//		signin.getCheckBox().click();
+//		Thread.sleep(2000);
+//		signin.getContinueBtn().click();
+		
+		signin.getMyAccount().click();
+		Thread.sleep(2000);
+		signin.setMobFeild().sendKeys("9382392290");
+		Thread.sleep(2000);
+		signin.getPassword().sendKeys("4v#jQzT#Heq8BqE");
+		Thread.sleep(2000);
+		signin.getLoginbtn().click();
+		
+	}
+	@AfterTest
+	public void teardown() {
+		//driver.quit();
+	}
+}
