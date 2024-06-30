@@ -108,7 +108,7 @@ public class SmitchCareHybridApp extends SmitchCareCapability{
 	                .perform();
 	        
 	        //clicking on HOME emoji
-	        driver.findElement(MobileBy.xpath("//*[@text='Home']")).click();
+	        driver.findElement(MobileBy.xpath("//*[@text='Place of study']")).click();
 	        
 	        // adding some note in add note feild
 	        driver.findElement(MobileBy.id("com.mysmitch.care:id/add_notes")).click();
