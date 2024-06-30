@@ -56,6 +56,7 @@ public class SmitchCareHybridApp extends SmitchCareCapability{
 	       //driver.findElement(MobileBy.id("com.mysmitch.care:id/tvActivityLabel")).click();
 		  //driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text(\"MOOD\"));").click();
 		
+        
 		  driver.findElement(MobileBy.id("com.mysmitch.care:id/mood_title")).click(); 
 		 
 		  Thread.sleep(9000);
@@ -66,8 +67,13 @@ public class SmitchCareHybridApp extends SmitchCareCapability{
 		//clicking on next button
 		   driver.findElement(MobileBy.id("com.mysmitch.care:id/next")).click();
 		 
-		 //clicking on confident emoji using text
+		 //clicking on emojis using text
+		   driver.findElement(MobileBy.xpath("//*[@text='Calm']")).click();
+		   driver.findElement(MobileBy.xpath("//*[@text='Relaxed']")).click();
 		   driver.findElement(MobileBy.xpath("//*[@text='Confident']")).click();
+		   driver.findElement(MobileBy.xpath("//*[@text='Focused']")).click();
+		   driver.findElement(MobileBy.xpath("//*[@text='Energetic']")).click();
+		   
 		   Thread.sleep(4000);
 		 
 	     
