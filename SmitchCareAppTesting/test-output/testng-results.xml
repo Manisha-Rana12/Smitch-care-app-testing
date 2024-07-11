@@ -1,21 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-27T19:14:00 IST" name="Default suite" finished-at="2024-06-27T19:15:25 IST" duration-ms="85433">
+  <suite started-at="2024-07-07T00:32:26 IST" name="Default suite" finished-at="2024-07-07T00:33:45 IST" duration-ms="79171">
     <groups>
     </groups>
-    <test started-at="2024-06-27T19:14:00 IST" name="Default test" finished-at="2024-06-27T19:15:25 IST" duration-ms="85433">
+    <test started-at="2024-07-07T00:32:26 IST" name="Default test" finished-at="2024-07-07T00:33:45 IST" duration-ms="79171">
       <class name="SmitchCare.SmitchCareHybridApp">
-        <test-method is-config="true" signature="test1()[pri:0, instance:SmitchCare.SmitchCareHybridApp@17497425]" started-at="2024-06-27T19:14:00 IST" name="test1" finished-at="2024-06-27T19:14:11 IST" duration-ms="11673" status="PASS">
+        <test-method is-config="true" signature="test1()[pri:0, instance:SmitchCare.SmitchCareHybridApp@f0da945]" started-at="2024-07-07T00:32:26 IST" name="test1" finished-at="2024-07-07T00:32:40 IST" duration-ms="14023" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method signature="login()[pri:1, instance:SmitchCare.SmitchCareHybridApp@17497425]" started-at="2024-06-27T19:14:11 IST" name="login" finished-at="2024-06-27T19:14:12 IST" duration-ms="1130" status="PASS">
+        <test-method signature="basicPermision()[pri:1, instance:SmitchCare.SmitchCareHybridApp@f0da945]" started-at="2024-07-07T00:32:40 IST" name="basicPermision" finished-at="2024-07-07T00:32:51 IST" duration-ms="10276" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- basicPermision -->
+        <test-method signature="login()[pri:2, instance:SmitchCare.SmitchCareHybridApp@f0da945]" started-at="2024-07-07T00:32:51 IST" name="login" finished-at="2024-07-07T00:33:00 IST" duration-ms="9227" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="moodFunctionality()[pri:2, instance:SmitchCare.SmitchCareHybridApp@17497425]" started-at="2024-06-27T19:14:12 IST" name="moodFunctionality" finished-at="2024-06-27T19:15:25 IST" duration-ms="72592" status="PASS">
+        <test-method signature="moodFunctionality()[pri:3, instance:SmitchCare.SmitchCareHybridApp@f0da945]" started-at="2024-07-07T00:33:00 IST" name="moodFunctionality" finished-at="2024-07-07T00:33:45 IST" duration-ms="45587" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MSI', ip: '192.168.0.146', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.mysmitch.care.ui.main.h..., appPackage: com.mysmitch.care, automationName: UIAutomator2, databaseEnabled: false, desired: {appActivity: com.mysmitch.care.ui.main.h..., appPackage: com.mysmitch.care, automationName: UIAutomator2, deviceName: 2201117SI, platformName: android}, deviceApiLevel: 33, deviceManufacturer: Xiaomi, deviceModel: 2201117SI, deviceName: EAYDVK9945M7KZXO, deviceScreenDensity: 440, deviceScreenSize: 1080x2400, deviceUDID: EAYDVK9945M7KZXO, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 13, statBarHeight: 93, takesScreenshot: true, viewportRect: {height: 2170, left: 0, top: 93, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 715d8525-a640-438c-a6b1-0df851d916b6
+*** Element info: {Using=xpath, value=//*[@text='Place of study']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MSI', ip: '192.168.0.146', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.mysmitch.care.ui.main.h..., appPackage: com.mysmitch.care, automationName: UIAutomator2, databaseEnabled: false, desired: {appActivity: com.mysmitch.care.ui.main.h..., appPackage: com.mysmitch.care, automationName: UIAutomator2, deviceName: 2201117SI, platformName: android}, deviceApiLevel: 33, deviceManufacturer: Xiaomi, deviceModel: 2201117SI, deviceName: EAYDVK9945M7KZXO, deviceScreenDensity: 440, deviceScreenSize: 1080x2400, deviceUDID: EAYDVK9945M7KZXO, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 13, statBarHeight: 93, takesScreenshot: true, viewportRect: {height: 2170, left: 0, top: 93, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 715d8525-a640-438c-a6b1-0df851d916b6
+*** Element info: {Using=xpath, value=//*[@text='Place of study']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:152)
+at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at SmitchCare.SmitchCareHybridApp.moodFunctionality(SmitchCareHybridApp.java:178)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- moodFunctionality -->
