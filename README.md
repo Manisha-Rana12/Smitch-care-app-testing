@@ -6,3 +6,19 @@
 - Basic Permissions Handling: Automates the process of granting necessary app permissions (notifications, location, Bluetooth, etc.).
 - User Login: Verifies login functionality using email authentication.
 - Mood Tracking: Automates the mood logging process, including selecting moods, adding notes, and navigating through the interface.
+
+## Prerequisites
+
+- Java JDK 8 or higher
+
+- Appium Server
+
+- Android SDK
+
+- Maven
+
+- Selenium WebDriver
+
+- TestNG
+
+- A physical or virtual Android device
