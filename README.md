@@ -22,3 +22,36 @@
 - TestNG
 
 - A physical or virtual Android device
+
+  ## Test cases
+
+Test case 1: Basic Permissions Handling
+
+- Description: Verifies that the app requests and receives necessary permissions.
+
+- Allow notifications, location, nearby sharing, and Bluetooth access.
+
+- Navigate to the next screen.
+Status: ✅ Pass
+
+Test case 2:  Login Functionality
+
+- Description: Validates the user login process.
+
+- Click on "Login" and select "Already have an account."
+
+- Choose "Login with Email," enter credentials, and submit.
+Status: ✅ Pass
+
+Test case 3: Mood Tracking
+
+- Description: Automates mood logging and associated activities.
+
+- Scroll to the "Mood" section and select a mood.
+
+- Choose emotional states, add notes, and save.
+
+- Log the mood entry successfully.
+Status: ✅ Pass
+
+
