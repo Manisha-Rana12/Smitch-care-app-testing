@@ -54,4 +54,10 @@ Test case 3: Mood Tracking
 - Log the mood entry successfully.
 Status: ✅ Pass
 
+## Notes
+
+- Some UI elements required coordinate-based scrolling due to Appium’s limitations with UiSelector.
+
+- Enhancements can be made to include additional functionalities like hydration and sleep tracking.
+
 
